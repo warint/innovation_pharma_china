@@ -1,1 +1,1 @@
-# Global Innovation in the Pharmaceutical Industry: A Jaccard Similarity Perspective
+# Innovation in the Pharmaceutical Industry in China: A Jaccard Similarity Perspective
