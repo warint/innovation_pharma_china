@@ -7,53 +7,59 @@
 
 <!-- badges: end -->
 
-The goal of ipcR is to …
+## Overview
+
+The dataset is about innovation dynamics in the pharmaceutical industry
+in China. Innovation dynamics is interpreted as knowledge transfer
+across technologies and through time (velocity). The dataset provides
+access to 143,916 Jaccard similarity indices. They proxy relatedness
+across technologies (classes) and through time (velocity). They are the
+result of a Natural Language Processing treatment of 69,923 patents in
+the pharmaceutical industry in China from 1990 to 2017.
+
+### Value of the Data
+
+  - The Jaccard similarity indices computed in this dataset allow us to
+    map patents’ relatedness in the Chinese pharmaceutical industry. The
+    Jaccard similarity provides a cross-section relatedness and
+    longitudinal cartography.
+
+  - Researchers can benefit from these data to capture the actual
+    dynamics of innovation, with a particular interest in knowledge
+    creation and relatedness in China’s pharmaceutical industry. The
+    data can also benefit policymakers and firms for the same reason.
+
+  - Researchers in innovation can use the similarity indices as either a
+    feature or a target variable in their models. As a feature variable,
+    the similarity indices can help describe the success of some public
+    policies, firms, or innovation ecosystems. As a target variable,
+    they may help find the source of innovation dynamics in the Chinese
+    pharmaceutical industry.
 
 ## Installation
 
-You can install the released version of ipcR from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("ipcR")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install ipcR from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("warint/innovation_pharma_china")
 ```
 
-## Example
+## How-To
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(ipcR)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+### Step 1: Getting the data
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+myData <- ipcr_data()
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+### Step 2: Creating visuals
 
-You can also embed plots, for example:
+The ipcr\_visual() function allows you to create four types of visual :
+line, point, box and point charts.
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+``` r
+ipcr_visual(chart = "line_1")
+```
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
