@@ -36,6 +36,36 @@ the pharmaceutical industry in China from 1990 to 2017.
     they may help find the source of innovation dynamics in the Chinese
     pharmaceutical industry.
 
+## Functionality
+
+### Description of the dataset variables
+
+<img src="./man/figures/variable_names.png" width="100%" />
+
+### Description of the top 20 manual code sections (1990-2017)
+
+| b14n |                     Pharmaceutical activities                      |                            Organs                             |
+| :--: | :----------------------------------------------------------------: | :-----------------------------------------------------------: |
+| d05h |                       Fermentation industry                        |              Microbiology, laboratory procedures              |
+| b04a |       Natural products (or genetically engineered), polymers       |                   Alkaloids, plant extracts                   |
+| b14s |                     Pharmaceutical activities                      |                 Miscellaneous activity terms                  |
+| b14f |                     Pharmaceutical activities                      |      Drugs acting on the blood and cardiovascular system      |
+| b04c |       Natural products (or genetically engineered), polymers       |                           Polymers                            |
+| b14c |                     Pharmaceutical activities                      | Anaesthetics and drugs relieving fever, inflammation and pain |
+| b04e |       Natural products (or genetically engineered), polymers       |                         Nucleic acids                         |
+| b12m |                 Diagnostics and formulation types                  |                       Formulations type                       |
+| b14j |                     Pharmaceutical activities                      |       Drugs acting on the muscular and nervous systems        |
+| b14h |                     Pharmaceutical activities                      |                     Cancer related drugs                      |
+| b11c |                         Process, apparatus                         |                  General process, apparatus                   |
+| b14a |                     Pharmaceutical activities                      |                         Antimicobials                         |
+| b14e |                     Pharmaceutical activities                      |          Drugs acting on the gastrointestinal system          |
+| b10a | Aromatics and cycloaliphatics (mono and bicyclic only), aliphatics |                 Rarer chemical groups general                 |
+| b14g |                     Pharmaceutical activities                      |               Drugs acting on the immune system               |
+| b14d |                     Pharmaceutical activities                      |           Hormonal, antihormonal, enzyme inhibitors           |
+| a12v |                        Polymer applications                        |           Medical, dental, cosmetics and veterinary           |
+| b07d |                     Heterocyclics, mononuclear                     |                    Sole hetero(s) nitrogen                    |
+| b06d |                      Heterocyclic fused ring                       |                    Sole hetero(s) nitrogen                    |
+
 ## Installation
 
 You can install ipcR from [GitHub](https://github.com/) with:
@@ -62,4 +92,4 @@ line, point, box and point charts.
 ipcr_visual(chart = "line_1")
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />

@@ -84,7 +84,7 @@ ipcr_visual <- function(chart = "line_1", class = "b14s", title = TRUE){
         ggplot2::theme(legend.position = "none") +
         ggplot2::scale_x_continuous(breaks = seq(from = 1990, to = 2017, by = 5))
     }
-  } else if(chart == "line_2" & class == jpc_class){
+  } else if(chart == "line_2"){
     patent_vol_i <- dplyr::select(IPC_data, name_i, vol_i)
     patent_vol_i <- unique(patent_vol_i)
     patent_vol_j <- dplyr::select(IPC_data, name_j, vol_j)
@@ -188,53 +188,7 @@ ipcr_visual <- function(chart = "line_1", class = "b14s", title = TRUE){
         ggplot2::stat_summary(fun=mean, geom="point", shape=23, size=4) +
         ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
     }
-  } else if(chart == "box_3"){
-    box_3 <- dplyr::select(IPC_data, class, class_i, year_diff, year_i, Jaccard_Similarity)
-    box_3 <- dplyr::filter(box_3, year_diff!=0)
-    box_3 <- dplyr::filter(box_3, class==0)
-    box_3 <- dplyr::filter(box_3, class_i=="b14s")
-    box_3$year_i <- as.factor(box_3$year_i)
-    if(title == TRUE){
-      ggplot2::ggplot(box_3, ggplot2::aes(x=year_i, y=Jaccard_Similarity)) +
-        ggplot2::geom_boxplot() +
-        ggplot2::geom_boxplot(fill=pal1, color="black") +
-        ggplot2::theme_minimal() +
-        ggplot2::xlab("") +
-        ggplot2::ylab("Jaccard similarity") +
-        ggplot2::ggtitle(paste("Jaccard similarity distribution per year for class", class)) +
-        ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0, hjust=1)) +
-        ggplot2::stat_summary(fun=mean, geom="point", shape=23, size=4)
-    } else {
-      ggplot2::ggplot(box_3, ggplot2::aes(x=year_i, y=Jaccard_Similarity)) +
-        ggplot2::geom_boxplot() +
-        ggplot2::geom_boxplot(fill=pal1, color="black") +
-        ggplot2::theme_minimal() +
-        ggplot2::xlab("") +
-        ggplot2::ylab("Jaccard similarity") +
-        ggplot2::ggtitle("") +
-        ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0, hjust=1)) +
-        ggplot2::stat_summary(fun=mean, geom="point", shape=23, size=4)
-    }
-  } else if(chart == "point_1"){
-    point_1 <- dplyr::select(IPC_data, class, class_i, year_diff, Jaccard_Similarity)
-    point_1 <- dplyr::filter(point_1, class==0)
-    point_1 <- dplyr::filter(point_1, class_i=="b14s")
-    if(title == TRUE){
-      ggplot2::ggplot(point_1, ggplot2::aes(x=year_diff, y=Jaccard_Similarity)) +
-        ggplot2::geom_point(color = pal1) +
-        ggplot2::theme_minimal()  +
-        ggplot2::ggtitle(paste("Jaccard Similarity distribution for class", class, "per time lag")) +
-        ggplot2::xlab("Time lag") +
-        ggplot2::ylab("Jaccard similarity")
-    } else {
-      ggplot2::ggplot(point_1, ggplot2::aes(x=year_diff, y=Jaccard_Similarity)) +
-        ggplot2::geom_point(color = pal1) +
-        ggplot2::theme_minimal()  +
-        ggplot2::ggtitle("") +
-        ggplot2::xlab("Time lag") +
-        ggplot2::ylab("Jaccard similarity")
-    }
-  } else {
+  }  else {
     stop("invalid arguments")
   }
 }
