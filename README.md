@@ -38,6 +38,8 @@ the pharmaceutical industry in China from 1990 to 2017.
 
 ## Functionality
 
+werwrew
+
 ### Description of the dataset variables
 
 |    Variable name    |                                                 Description                                                  |
@@ -81,14 +83,14 @@ the pharmaceutical industry in China from 1990 to 2017.
 
 ## Installation
 
-You can install ipcR from [GitHub](https://github.com/) with:
+Option 1. You can install ipcR from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("warint/innovation_pharma_china")
 ```
 
-You can also download the date
+Option 2. You can also download the data
 [here](https://warin.ca/datalake/innovation_pharma_china/innovation_pharma_china.csv)
 
 ## How-To
