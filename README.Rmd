@@ -32,7 +32,6 @@ The dataset is about innovation dynamics in the pharmaceutical industry in China
 
 ## Functionality
 
-werwrew
 
 ### Description of the dataset variables
 

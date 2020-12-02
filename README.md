@@ -38,8 +38,6 @@ the pharmaceutical industry in China from 1990 to 2017.
 
 ## Functionality
 
-werwrew
-
 ### Description of the dataset variables
 
 |    Variable name    |                                                 Description                                                  |
