@@ -88,7 +88,7 @@ Option 1. You can install ipcR from [GitHub](https://github.com/) with:
 devtools::install_github("warint/innovation_pharma_china")
 ```
 
-Option 2. You can also download the data
+Option 2. You can also download the data (csv format)
 [here](https://warin.ca/datalake/innovation_pharma_china/innovation_pharma_china.csv)
 
 ## How-To
